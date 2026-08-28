@@ -1,6 +1,13 @@
 # Media sources
 
-All images under `assets/images/` are Joshua-owned project, event or presentation material selected for this portfolio.
+All images under `assets/images/` are source-grounded project or presentation material selected for this portfolio. The portrait previously stored in this repository is not included.
+
+Selected visual groups:
+
+- FYP diagrams and hardware: P300 EEG-BCI FYP 2 results and AutoWriter figure exports.
+- Academic images: transmission-line simulation and 8051 elevator-control records.
+- TKK images: 2020 aquaponics presentation slides.
+- TENG grip images: prototype test screens extracted from the supplied Prof Arata presentation.
 
 External event destinations linked on the site:
 
