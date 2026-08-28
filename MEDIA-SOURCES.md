@@ -5,7 +5,7 @@ All images under `assets/images/` are source-grounded project or presentation ma
 Selected visual groups:
 
 - FYP diagrams and hardware: P300 EEG-BCI FYP 2 results and AutoWriter figure exports.
-- Academic images: transmission-line simulation and 8051 elevator-control records.
+- Academic images: transmission-line simulation, Y1 programming flow diagrams, 8051 elevator-control records, Y3 ASIC figures and Y4 DSP FIR response plots.
 - TKK images: 2020 aquaponics presentation slides.
 - TENG grip images: prototype test screens extracted from the supplied Prof Arata presentation.
 
