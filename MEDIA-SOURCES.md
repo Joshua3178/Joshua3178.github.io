@@ -6,6 +6,9 @@ Selected visual groups:
 
 - FYP diagrams and hardware: P300 EEG-BCI FYP 2 results and AutoWriter figure exports.
 - Academic images: transmission-line simulation, Y1 programming flow diagrams, 8051 elevator-control records, Y3 ASIC figures and Y4 DSP FIR response plots.
+- Main portrait: user-provided image approved for the homepage.
+- TEDx images: personal TEDx materials and the published talk video thumbnail.
+- Life and Death Expo photo: UTAR News, "Exploring the essence of living through UTAR Life and Death Expo 2024".
 - TKK images: 2020 aquaponics presentation slides.
 - TENG grip images: prototype test screens extracted from the supplied Prof Arata presentation.
 
