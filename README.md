@@ -1,3 +1,5 @@
-# Joshua3178 portfolio
+# Joshua Ng Yu Meng portfolio
 
-GitHub Pages portfolio for the public project catalogue. GitHub will publish this site at `https://Joshua3178.github.io` after the repository named `Joshua3178.github.io` is pushed and Pages is enabled from the default branch.
+Five-page GitHub Pages portfolio covering academic engineering work, innovation projects, events and experience, and the P300 EEG-BCI final-year project.
+
+The public site is published from the `main` branch at `https://joshua3178.github.io` after GitHub Pages is enabled.
