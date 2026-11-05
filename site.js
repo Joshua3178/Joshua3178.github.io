@@ -25,4 +25,13 @@
   var io = new IntersectionObserver(function(es){ fired = true; es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); settle(e.target); } }); }, {rootMargin:'0px 0px -5% 0px'});
   items.forEach(function(el){ io.observe(el); });
   setTimeout(function(){ if (!fired) showAll(); }, 2500);
+
+  // count numbers up once they are on screen; the real value is already in the page
+  var nums = document.querySelectorAll('b[data-n]');
+  var co = new IntersectionObserver(function(es){ es.forEach(function(e){
+    if (!e.isIntersecting) return; co.unobserve(e.target);
+    var b = e.target, n = parseFloat(b.getAttribute('data-n')), d = +(b.getAttribute('data-d') || 0), s = b.getAttribute('data-s') || '', t0 = performance.now();
+    (function step(t){ var p = Math.min(1, (t - t0) / 1400); b.textContent = (n * (1 - Math.pow(1 - p, 3))).toFixed(d) + s; if (p < 1) requestAnimationFrame(step); })(t0);
+  }); }, {threshold:.5});
+  nums.forEach(function(b){ co.observe(b); });
 })();
