@@ -1,10 +1,132 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Electronic engineering portfolio of Joshua Ng Yu Meng, covering EEG-BCI research, robotics, innovation projects, coursework and events."><title>Joshua Ng Yu Meng | Engineering portfolio</title><link rel="stylesheet" href="styles.css"></head>
-<body><header class="site-header"><a class="wordmark" href="index.html">JOSHUA<span>3178</span></a><nav aria-label="Primary navigation"><a aria-current="page" href="index.html">Home</a><a href="academic.html">Academic</a><a href="innovation.html">Innovation</a><a href="events.html">Events</a><a href="certificates.html">Certificates</a><a href="fyp.html">EEG-BCI FYP</a></nav></header>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Joshua Ng Yu Meng, Electronic Engineering student at UTAR. EEG-BCI research, robotics, debate, TEDx and the Camino de Santiago."><title>Joshua Ng Yu Meng | Engineering portfolio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap"><link rel="stylesheet" href="home.css"></head>
+<body><div class="progress" id="progress"></div><script>document.documentElement.classList.add('js')</script>
+<header class="top" id="top"><div class="wrap">
+  <a class="brand" href="index.html"><i></i>Joshua Ng Yu Meng</a>
+  <nav class="nav" aria-label="Primary navigation"><a href="#story">Story</a><a href="academic.html">Academic</a><a href="innovation.html">Innovation</a><a href="events.html">Events</a><a href="certificates.html">Certificates</a><a href="fyp.html">FYP</a></nav>
+</div></header>
+
 <main>
-  <section class="hero"><div class="hero-grid"><div><p class="kicker">Electronic engineering · Malaysia</p><h1>Joshua Ng Yu Meng<br><em>electronic engineering portfolio.</em></h1><p class="lede">I study Electronic Engineering at Universiti Tunku Abdul Rahman (UTAR), my work covers EEG-BCI research, robotics, computer vision and embedded systems. My main project is a P300 EEG system in which the user picks one of four objects by attention, the robotic arm will then retrieve the selected object.</p><div class="action-row"><a class="button primary" href="fyp.html">View the EEG-BCI FYP</a><a class="button" href="innovation.html">View the 38-record innovation archive</a></div></div><aside class="hero-side"><figure class="media-frame"><img src="assets/images/joshua-main-portrait.jpg" alt="Portrait of Joshua Ng Yu Meng"><figcaption>Joshua Ng Yu Meng.</figcaption></figure></aside></div></section>
-  <section class="stat-line"><span><strong>17</strong> competition records</span><span><strong>21</strong> invention records</span><span><strong>38</strong> academic entries</span><span><strong>28</strong> event records</span><span><strong>16</strong> certificates</span></section>
-  <section class="chapter-links" aria-label="Portfolio chapters"><a class="chapter" href="academic.html"><span class="label">01</span><h2>Academic</h2><p>My coursework from Year 1 to Year 4, with the flowcharts, schematics and measured plots from each report.</p><b>View academic work</b></a><a class="chapter" href="innovation.html"><span class="label">02</span><h2>Innovation</h2><p>Competition entries for ITEX, APCYA and Tech For Good, plus my inventions in CAD, EEG tools and computer vision.</p><b>View 38 records</b></a><a class="chapter" href="events.html"><span class="label">03</span><h2>Events</h2><p>Talks and debate, club leadership, plus volunteer teaching.</p><b>View events</b></a><a class="chapter" href="certificates.html"><span class="label">04</span><h2>Certificates</h2><p>AI credentials from Oracle and Microsoft, together with programme and leadership certificates.</p><b>View 16 certificates</b></a><a class="chapter" href="fyp.html"><span class="label">05</span><h2>EEG-BCI FYP</h2><p>P300 decoding for vision-guided robotic object retrieval.</p><b>View the FYP</b></a></section>
-  <section class="section"><div class="section-heading"><p class="kicker">Flagship research</p><h2>P300 EEG-BCI system architecture</h2><p class="lede">My final-year project links a camera, an EEG headset and a 6-DOF robotic arm in one pipeline. Each object keeps the same identity from the camera frame until the arm moves.</p></div><figure class="media-frame"><img src="assets/images/fyp-system-architecture.png" alt="P300 EEG BCI vision and robotic retrieval system architecture"><figcaption>System architecture of the FYP, covering the camera scene, visual oddball stimulation, EEG decoding, target revalidation and robotic action.</figcaption></figure></section>
-  <section class="section dark-panel"><div class="section-heading"><p class="kicker">Public repositories</p><h2>My public repositories</h2></div><div class="repository-grid"><article class="flagship-card"><p class="label">Research flagship</p><h3>P300 EEG-BCI object selection</h3><p>A Transformer scores the P300 response to each flashed object and the evidence is accumulated over the flashes, the object with the highest score is selected before a robotic action path is prepared.</p><a href="https://github.com/Joshua3178/transformer-p300-bci-object-selection" target="_blank" rel="noreferrer">Open repository</a></article><article><p class="label">Computer vision</p><h3>Surgical Guard</h3><p>Open-vocabulary screening of surgical scenes. The prompts are grouped in order to flag bleeding and retained equipment for review.</p><a href="https://github.com/Joshua3178/surgical-guard-computer-vision" target="_blank" rel="noreferrer">Open repository</a></article><article><p class="label">Human intent</p><h3>Iris intent selection</h3><p>A webcam scores the pupil response to each flashed target, the result can be passed on to a vision or robotic workflow.</p><a href="https://github.com/Joshua3178/vlm-iris-robotic-arm-intent" target="_blank" rel="noreferrer">Open repository</a></article></div></section>
-</main><footer><span>Joshua Ng Yu Meng</span><span>Electronic Engineering</span><a href="mailto:yumeng3178@gmail.com">Email</a><a href="https://github.com/Joshua3178" target="_blank" rel="noreferrer">GitHub</a></footer></body></html>
+  <section class="hero"><div class="wrap">
+    <div>
+      <p class="status hud ld" style="--d:.1s"><b></b>Electronic Engineering · UTAR · Malaysia</p>
+      <h1 class="name" aria-label="Joshua Ng Yu Meng"><span class="typed" data-t="Joshua" style="display:block;color:var(--white)">Joshua</span><span class="typed" data-t="Ng Yu Meng">Ng Yu Meng</span></h1>
+      <p class="tag ld" style="--d:1.5s">EEG <em>/</em> robotics <em>/</em> debate <em>/</em> TEDx speaker</p>
+      <div class="btns ld" style="--d:1.7s"><a class="btn main" href="#story">My story &rarr;</a><a class="btn alt" href="fyp.html">EEG-BCI FYP</a></div>
+    </div>
+    <div class="frame-wrap">
+      <div class="frame" id="frame"><img src="assets/images/joshua-main-portrait.jpg" alt="Portrait of Joshua Ng Yu Meng"></div>
+      <div class="frame-tag hud ld" style="--d:1.4s"><span>ID // NG.YU.MENG</span><span>KAMPAR</span></div>
+    </div>
+  </div><div class="stripes"></div></section>
+
+  <div class="ticker" aria-hidden="true"><div><span>Chong Hwa</span>/<span>Victoria School</span>/<span>UTAR</span>/<span>NTU Taipei</span>/<span>TEDxUTAR</span>/<span>Camino de Santiago</span>/<span>Chong Hwa</span>/<span>Victoria School</span>/<span>UTAR</span>/<span>NTU Taipei</span>/<span>TEDxUTAR</span>/<span>Camino de Santiago</span>/</div></div>
+
+  <div class="nums" id="nums"><div><b data-n="4">0</b><span>countries</span></div><div><b data-n="115" data-s=" km">0</b><span>walked to Santiago</span></div><div><b data-n="16">0</b><span>certificates</span></div><div><b data-n="38">0</b><span>innovation records</span></div></div>
+
+  <section class="block" id="story"><div class="wrap">
+    <div class="head rv"><h2>My story</h2><span class="hud">01 / 03</span></div>
+    <div class="cards">
+      <article class="card rv"><div class="pic type"><b>2016</b><span class="yr">2016 – 2018</span></div><div class="txt"><h3>Chong Hwa, KL</h3><p>Joined debate. Lost badly, quit, came back 30 days later.</p></div></article>
+      <article class="card rv"><div class="pic"><img src="assets/images/victoria-school-hua-yi-2019.jpg" alt="Victoria School team as Hua Yi Invitational champions, 2019" loading="lazy" style="object-position:center 35%"><span class="yr">2019 – 2022</span></div><div class="txt"><h3>Victoria School, SG</h3><p>ASEAN Scholar. Hua Yi debate champions.</p></div></article>
+      <article class="card rv"><div class="pic"><img src="assets/images/fyp-dofbot.jpeg" alt="DOFBOT robotic arm used in the final-year project" loading="lazy"><span class="yr">2023 – 2027</span></div><div class="txt"><h3>UTAR, Kampar</h3><p>Electronic Engineering. An EEG-driven robot arm for my FYP.</p></div></article>
+      <article class="card rv"><div class="pic"><img src="assets/images/life-death-expo-utar-2024.jpg" alt="Audience at the 2024 Life and Death Expo, UTAR" loading="lazy"><span class="yr">2024</span></div><div class="txt"><h3>Life and Death Expo</h3><p>Logistics committee.</p></div></article>
+      <article class="card rv"><div class="pic"><img src="assets/images/innovation-ntu-grip-hand.png" alt="Tactile grip test on a human hand at NTU" loading="lazy" style="object-position:right center"><span class="yr">2025 – 2026</span></div><div class="txt"><h3>NTU, Taipei</h3><p>Research intern, TENG touch sensor.</p></div></article>
+      <article class="card rv"><div class="pic"><img src="assets/images/tedx-talk-video-thumbnail.jpg" alt="Joshua on the TEDxUTAR Kampar 2025 stage" loading="lazy"><span class="yr">2025</span></div><div class="txt"><h3>TEDxUTAR Kampar</h3><p>A talk on mental health and fake optimism.</p></div></article>
+      <article class="card rv"><div class="pic type"><b>+</b><span class="yr">Since 2023</span></div><div class="txt"><h3>Church</h3><p>Bible study, and English classes for refugee students.</p></div></article>
+      <article class="card rv"><div class="pic"><img src="assets/images/camino-sarria-sign.jpg" alt="Sarria town sign at night" loading="lazy"><span class="yr">Spain</span></div><div class="txt"><h3>Camino de Santiago</h3><p>Sarria to Santiago, about 115 km on foot.</p></div></article>
+    </div>
+  </div>
+  <div class="strip" aria-hidden="true"><div>
+    <img src="assets/images/camino-forest-path.jpg" alt="" loading="lazy"><img src="assets/images/fyp-calibration.jpeg" alt="" loading="lazy"><img src="assets/images/tedx-speaking-preparation.jpg" alt="" loading="lazy"><img src="assets/images/camino-km0-waymark.jpg" alt="" loading="lazy"><img src="assets/images/fyp-apriltag.jpeg" alt="" loading="lazy"><img src="assets/images/tedx-speaking.jpg" alt="" loading="lazy"><img src="assets/images/innovation-ntu-grip-mouse.png" alt="" loading="lazy"><img src="assets/images/victoria-school-hua-yi-2019.jpg" alt="" loading="lazy">
+    <img src="assets/images/camino-forest-path.jpg" alt="" loading="lazy"><img src="assets/images/fyp-calibration.jpeg" alt="" loading="lazy"><img src="assets/images/tedx-speaking-preparation.jpg" alt="" loading="lazy"><img src="assets/images/camino-km0-waymark.jpg" alt="" loading="lazy"><img src="assets/images/fyp-apriltag.jpeg" alt="" loading="lazy"><img src="assets/images/tedx-speaking.jpg" alt="" loading="lazy"><img src="assets/images/innovation-ntu-grip-mouse.png" alt="" loading="lazy"><img src="assets/images/victoria-school-hua-yi-2019.jpg" alt="" loading="lazy">
+  </div></div>
+  </section>
+
+  <section class="block" id="timeline"><div class="wrap">
+    <div class="head rv"><h2>Timeline</h2><span class="hud">02 / 03</span></div>
+    <ul class="line" id="line">
+      <li class="rv"><b>2016</b><span>Chong Hwa. Joined debate.</span></li>
+      <li class="rv"><b>2017</b><span>Stepped off the stage.</span></li>
+      <li class="rv"><b>2019</b><span>Victoria School. Hua Yi champion.</span></li>
+      <li class="rv"><b>2022</b><span>O-Level, then Catholic JC.</span></li>
+      <li class="rv"><b>2023</b><span>UTAR. Volunteer teaching.</span></li>
+      <li class="rv"><b>2024</b><span>Chinese debate.</span></li>
+      <li class="rv"><b>2025</b><span>Makers Club chair. TEDx. NTU.</span></li>
+      <li class="rv"><b>2026</b><span>EEG-BCI final-year project.</span></li>
+      <li class="rv"><b>2027</b><span>Graduation.</span></li>
+    </ul>
+  </div></section>
+
+  <section class="block" id="more"><div class="wrap">
+    <div class="head rv"><h2>Explore</h2><span class="hud">03 / 03</span></div>
+    <div class="tiles">
+      <a class="tile rv" href="academic.html"><img src="assets/images/academic-y4-highpass-response.jpeg" alt="" loading="lazy"><span>/academic</span></a>
+      <a class="tile rv" href="innovation.html"><img src="assets/images/cad-cage-assembly.jpg" alt="" loading="lazy"><span>/innovation</span></a>
+      <a class="tile rv" href="events.html"><img src="assets/images/tedx-speaking-preparation.jpg" alt="" loading="lazy"><span>/events</span></a>
+      <a class="tile rv" href="certificates.html"><img src="assets/certs/kitahack-2026.jpg" alt="" loading="lazy"><span>/certificates</span></a>
+      <a class="tile rv" href="fyp.html"><img src="assets/images/fyp-system-architecture.png" alt="" loading="lazy"><span>/fyp</span></a>
+    </div>
+    <ul class="code" style="margin-top:50px">
+      <li><a href="https://github.com/Joshua3178/transformer-p300-bci-object-selection" target="_blank" rel="noreferrer">P300 EEG-BCI object selection <small>picks an object from EEG</small></a></li>
+      <li><a href="https://github.com/Joshua3178/surgical-guard-computer-vision" target="_blank" rel="noreferrer">Surgical Guard <small>flags bleeding in surgery video</small></a></li>
+      <li><a href="https://github.com/Joshua3178/vlm-iris-robotic-arm-intent" target="_blank" rel="noreferrer">Iris intent selection <small>picks a target from pupil response</small></a></li>
+    </ul>
+  </div></section>
+</main>
+
+<footer><div class="wrap"><span class="hud">Joshua Ng Yu Meng · 2026</span><span><a href="mailto:yumeng3178@gmail.com">Email</a><a href="https://github.com/Joshua3178" target="_blank" rel="noreferrer">GitHub</a><a href="#top">Top</a></span></div></footer>
+<script>
+(function(){
+  var top = document.getElementById('top');
+  function onScroll(){ top.classList.toggle('solid', window.scrollY > 20); }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  (function(){
+  // scroll progress bar
+  var bar = document.getElementById('progress');
+  function prog(){ var m = document.documentElement.scrollHeight - innerHeight; bar.style.transform = 'scaleX(' + (m > 0 ? scrollY / m : 0) + ')'; }
+  window.addEventListener('scroll', prog, {passive:true}); prog();
+  if (still) return;
+  // type the name, one line after the other
+  var lines = document.querySelectorAll('.name .typed'), li = 0;
+  lines.forEach(function(s){ s.textContent = ''; });
+  function typeLine(){
+    if (li >= lines.length) return;
+    var s = lines[li], t = s.getAttribute('data-t'), k = 0;
+    var iv = setInterval(function(){ s.textContent = t.slice(0, ++k); if (k >= t.length) { clearInterval(iv); if (li < lines.length - 1) s.classList.add('done'); li++; setTimeout(typeLine, 120); } }, 70);
+  }
+  setTimeout(typeLine, 250);
+  // cursor glow and portrait tilt in the hero
+  var hero = document.querySelector('.hero'), frame = document.getElementById('frame');
+  hero.addEventListener('mousemove', function(e){
+    var r = hero.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+    hero.style.setProperty('--mx', (x * 100) + '%'); hero.style.setProperty('--my', (y * 100) + '%');
+    frame.style.transform = 'rotateY(' + ((x - .5) * 10) + 'deg) rotateX(' + ((.5 - y) * 8) + 'deg)';
+  });
+  hero.addEventListener('mouseleave', function(){ frame.style.transform = ''; });
+  // tiles tilt toward the mouse
+  document.querySelectorAll('.tile').forEach(function(t){
+    t.addEventListener('mousemove', function(e){ var r = t.getBoundingClientRect(); var x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; t.style.transform = 'perspective(600px) rotateY(' + (x * 12) + 'deg) rotateX(' + (-y * 12) + 'deg) translateY(-5px)'; });
+    t.addEventListener('mouseleave', function(){ t.style.transform = ''; });
+  });
+  // count the numbers up once they are on screen, and fill the timeline
+  var once = new IntersectionObserver(function(es){ es.forEach(function(e){
+    if (!e.isIntersecting) return; once.unobserve(e.target);
+    if (e.target.id === 'line') { e.target.classList.add('in'); return; }
+    e.target.querySelectorAll('b[data-n]').forEach(function(b){
+      var n = +b.getAttribute('data-n'), s = b.getAttribute('data-s') || '', t0 = performance.now();
+      (function step(t){ var p = Math.min(1, (t - t0) / 1400); b.textContent = Math.round(n * (1 - Math.pow(1 - p, 3))) + s; if (p < 1) requestAnimationFrame(step); })(t0);
+    });
+  }); }, {threshold:.4});
+  once.observe(document.getElementById('nums')); once.observe(document.getElementById('line'));
+  })();
+  // reveal with a stagger inside each group
+  var groups = document.querySelectorAll('.cards, .line, .tiles');
+  groups.forEach(function(g){ Array.prototype.forEach.call(g.querySelectorAll('.rv'), function(el, i){ el.style.setProperty('--i', i); }); });
+  var items = document.querySelectorAll('.rv');
+  if (still || !('IntersectionObserver' in window)) { items.forEach(function(el){ el.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -6% 0px'});
+  items.forEach(function(el){ io.observe(el); });
+})();
+</script></body></html>
