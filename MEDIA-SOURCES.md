@@ -21,6 +21,6 @@ External event destinations linked on the site:
 
 Certificates and videos:
 
-- `assets/certs/`: page renders of 14 certificates from the personal Learning Cert folder. The passport number and date of birth are covered in the IIPP image.
+- `assets/certs/`: page renders of 15 certificates from the personal Learning Cert folder. The passport number and date of birth are covered in the IIPP image.
 - `assets/videos/fyp-live-retrieval-v10.mp4`: FYP 2 recorded end-to-end run (V10).
 - `assets/videos/demiurge-demo.mp4`: Demiurge research assistant demonstration video, from the Kabel project folder.
