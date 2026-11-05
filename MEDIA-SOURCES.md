@@ -18,3 +18,9 @@ External event destinations linked on the site:
 - Xiao En, Kampar UTAR Living Life and Death Expo: https://xiao-en.com/cool_timeline/milestones-20240316/
 - TEDxUTAR Kampar talk: https://youtu.be/0LwCP-skTLY?si=Z0L5x6rH1_snY8cT
 - MonsoonSIM MERMC 2023: https://www.monsoonsim.com/mermc2023.html
+
+Certificates and videos:
+
+- `assets/certs/`: page renders of 14 certificates from the personal Learning Cert folder. The passport number and date of birth are covered in the IIPP image.
+- `assets/videos/fyp-live-retrieval-v10.mp4`: FYP 2 recorded end-to-end run (V10).
+- `assets/videos/demiurge-demo.mp4`: Demiurge research assistant demonstration video, from the Kabel project folder.
