@@ -261,3 +261,4 @@ a.card{text-decoration:none}
 .nums span{display:block;margin-top:8px;line-height:1.5}
 @media(max-width:1000px){.steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:620px){.steps{grid-template-columns:1fr 1fr}.cards.two{grid-template-columns:1fr}.nums.three{grid-template-columns:1fr}.nums.three div{border-right:0}.bigimg img{padding:8px}.lead-line{font-size:1rem}}
+.card .desc.full{display:block;-webkit-line-clamp:unset;overflow:visible;color:var(--text);font-size:.9rem;line-height:1.65}
