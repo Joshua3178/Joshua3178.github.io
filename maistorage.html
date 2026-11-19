@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Telepathy with AI: Joshua Ng Yu Meng&#x27;s demo with MaiStorage, pupil-based intent selection with Qwen3-VL, and fine-tuning Llama 3.2 11B Vision on aiDAPTIV+."><title>MaiStorage collaboration | Joshua Ng Yu Meng</title><link rel="preconnect" href="https://api.fontshare.com"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap"><link rel="stylesheet" href="home.css"></head>
+<body><div class="progress"></div><script>document.documentElement.classList.add('js')</script>
+<header class="top solid" id="top"><div class="wrap"><a class="brand" href="index.html"><i></i>Joshua Ng Yu Meng</a><nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="academic.html">Academic</a><a href="innovation.html">Innovation</a><a href="events.html">Events</a><a href="certificates.html">Certificates</a><a href="fyp.html">FYP</a><a href="maistorage.html" aria-current="page">MaiStorage</a></nav><button class="menu-btn" aria-label="Open menu" aria-expanded="false"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div></header>
+<main>
+  <section class="phero"><div class="wrap"><p class="status">Industry collaboration · MaiStorage</p><h1>Telepathy<span>with AI</span></h1><p class="tag">Pupil intent <em>/</em> Qwen3-VL <em>/</em> aiDAPTIV+ fine-tuning</p>
+  <div class="chips"><span><b>28 Jan 2026</b>demo</span><span><b>1,000</b>images</span><span><b>94.5%</b>after fine-tuning</span><a href="assets/certs/maistorage-trusted-intelligence-2026.jpg" target="_blank" rel="noreferrer" data-lb>Certificate</a><a href="https://github.com/Joshua3178/vlm-iris-robotic-arm-intent" target="_blank" rel="noreferrer">Repository</a></div></div></section>
+
+  <section class="block" id="story"><div class="wrap">
+    <div class="head"><span class="hud">01.</span><h2>The story</h2></div>
+    <article class="chapter"><div class="when">The idea</div><div><h3>Choosing without hands</h3><p>The project started from one question: how does a person who cannot move tell a robot what they want? A patient lying in bed should be able to ask for medicine, water or a phone, quickly and privately, just by looking at it. We called it telepathy with AI.</p><p class="quote">"Device allows you to choose whatever you want, fast, without using your hands."</p></div></article>
+    <article class="chapter"><div class="when">Jan 2026</div><div><h3>Building the demo</h3><p>My final-year project reads intent from P300 brainwaves, the EEG headset however could not come to the booth, hence the pupil stood in for the brain. A webcam tracks the pupil while each object flashes in turn, and the object that makes the pupil react the most is the one the user wants.</p><p>A second camera looks down at the table. Qwen3-VL-8B, served in FP8 behind an API, scans the scene first and names up to four objects by colour and type.</p></div></article>
+    <article class="chapter"><div class="when">28 Jan 2026</div><div><h3>Demo day at The Everly Putrajaya</h3><p>I presented the project at MaiStorage's demonstration booth during their event, Enabling Education and Industry AI through Trusted Intelligence, together with their aiDAPTIV+ platform.</p></div></article>
+    <article class="chapter"><div class="when">Sep 2026</div><div><h3>Fine-tuning on aiDAPTIV+</h3><p>After the event the work moved to MaiStorage's AITPC workstation. I built a dataset of 1,000 images across 20 classes, ten medical devices and ten everyday Malaysian items, and fully fine-tuned Llama 3.2 11B Vision on a single GPU, with aiDAPTIV+ swapping the training state to an NVMe drive. The 700 iterations took about nine hours.</p></div></article>
+  </div></section>
+
+  <section class="block alt" id="how"><div class="wrap">
+    <div class="head"><span class="hud">02.</span><h2>How the demo works</h2></div>
+    <ol class="steps"><li class="step"><b>01</b><span>Scan the table with the top camera</span></li><li class="step"><b>02</b><span>Qwen3-VL names up to four objects</span></li><li class="step"><b>03</b><span>Calibrate the pupil camera</span></li><li class="step"><b>04</b><span>Flash five times to learn the pupil baseline</span></li><li class="step"><b>05</b><span>Flash each object in turn</span></li><li class="step"><b>06</b><span>Pick the object with the strongest pupil reaction</span></li></ol>
+  </div></section>
+
+  <section class="block" id="ui"><div class="wrap">
+    <div class="head"><span class="hud">03.</span><h2>The UI</h2></div>
+    <div class="gallery">
+      <a href="assets/maistorage/ui-main-menu.jpg" target="_blank" rel="noreferrer" data-lb><img src="assets/maistorage/ui-main-menu.jpg" alt="PLR main menu" loading="lazy" style="object-fit:cover;padding:0;background:#000"><span>Main menu of the selection app.</span></a>
+      <a href="assets/maistorage/ui-instructions.jpg" target="_blank" rel="noreferrer" data-lb><img src="assets/maistorage/ui-instructions.jpg" alt="Instructions and safety warning screen" loading="lazy" style="object-fit:cover;padding:0;background:#000"><span>Alignment, photosensitivity and blinking instructions before calibration.</span></a>
+      <a href="assets/maistorage/ui-console.jpg" target="_blank" rel="noreferrer" data-lb><img src="assets/maistorage/ui-console.jpg" alt="Console log of calibration, benchmarking and selection" loading="lazy" style="object-fit:cover;padding:0"><span>Console during calibration, the flash benchmark and the selection run.</span></a>
+    </div>
+  </div></section>
+
+  <section class="block alt" id="code"><div class="wrap">
+    <div class="head"><span class="hud">04.</span><h2>The code</h2></div>
+    <div class="cards two" style="gap:24px">
+      <div style="grid-column:1/-1"><figure class="code"><figcaption><span>prometheus_vlm.py · scanning the table</span><b>Python</b></figcaption><pre><code>vlm_prompt = (
+    <span class="s">f&quot;Look at the image closely. List ONLY the &#x27;{self.target_category}&#x27; items that are visibly present.\n&quot;</span>
+    <span class="s">f&quot;Strict Rules:\n&quot;</span>
+    <span class="s">f&quot;1. Format: &#x27;Color Object&#x27; (e.g., &#x27;Red Apple&#x27;, &#x27;Black Pen&#x27;).\n&quot;</span>
+    <span class="s">f&quot;2. Do NOT guess. If you don&#x27;t see it, do not list it.\n&quot;</span>
+    <span class="s">f&quot;4. Return a simple comma-separated list.\n&quot;</span>
+    <span class="s">f&quot;5. If no &#x27;{self.target_category}&#x27; is found, reply: NONE.\n&quot;</span>
+)
+payload = {
+    <span class="s">&quot;model&quot;</span>: <span class="k">self</span>.model_name,  <span class="c"># Qwen3-VL-8B-Instruct-FP8</span>
+    <span class="s">&quot;messages&quot;</span>: [{<span class="s">&quot;role&quot;</span>: <span class="s">&quot;user&quot;</span>, <span class="s">&quot;content&quot;</span>: [
+        {<span class="s">&quot;type&quot;</span>: <span class="s">&quot;image_url&quot;</span>, <span class="s">&quot;image_url&quot;</span>: {<span class="s">&quot;url&quot;</span>: <span class="s">f&quot;data:image/png;base64,{image_base64}&quot;</span>}},
+        {<span class="s">&quot;type&quot;</span>: <span class="s">&quot;text&quot;</span>, <span class="s">&quot;text&quot;</span>: vlm_prompt}]}],
+    <span class="s">&quot;max_tokens&quot;</span>: 300, <span class="s">&quot;temperature&quot;</span>: 0.0,
+}
+response = requests.post(<span class="k">self</span>.model_url + <span class="s">&quot;/v1/chat/completions&quot;</span>, json=payload, timeout=60)</code></pre></figure></div>
+      <figure class="code"><figcaption><span>IrisV2.py · measuring the pupil</span><b>Python</b></figcaption><pre><code>gray = cv2.cvtColor(eye_img, cv2.COLOR_BGR2GRAY)
+blur = cv2.GaussianBlur(gray, (5, 5), 0)
+_, threshold = cv2.threshold(blur, <span class="k">self</span>.best_threshold, 255, cv2.THRESH_BINARY_INV)
+pupil_area = cv2.countNonZero(threshold)
+
+<span class="c"># Normalize area by eye width to handle Z-distance movement</span>
+norm_val = (pupil_area / (eye_width_px ** 2)) * 10000.0
+
+<span class="k">self</span>.history.append(norm_val)
+<span class="k">if</span> len(<span class="k">self</span>.history) &gt; 5: <span class="k">self</span>.history.pop(0)
+smoothed = sum(<span class="k">self</span>.history) / len(<span class="k">self</span>.history)</code></pre></figure>
+      <figure class="code"><figcaption><span>IrisV2.py · flash benchmark</span><b>Python</b></figcaption><pre><code><span class="k">def</span> run_benchmark_flashes(<span class="k">self</span>, count, results):
+    <span class="k">if</span> count &gt;= 5:
+        <span class="k">self</span>.calculate_dynamic_threshold(results)
+        <span class="k">return</span>
+    baseline = <span class="k">self</span>.tracker.current_ratio
+    <span class="k">self</span>.calib_overlay.configure(bg=<span class="s">&quot;white&quot;</span>, fg=<span class="s">&quot;black&quot;</span>)   <span class="c"># flash</span>
+    <span class="k">self</span>.root.update()
+    time.sleep(0.3)
+    reaction = <span class="k">self</span>.tracker.current_ratio
+    shrinkage = baseline - reaction
+    <span class="k">if</span> shrinkage &gt; 0 <span class="k">and</span> <span class="k">not</span> <span class="k">self</span>.tracker.is_blinking: results.append(shrinkage)</code></pre></figure>
+      <figure class="code"><figcaption><span>exp_config_llama11b_fullft_run1.yaml · aiDAPTIV+</span><b>YAML</b></figcaption><pre><code><span class="k">run_settings</span>:
+  <span class="k">task_type</span>: <span class="s">&quot;image-text-to-text&quot;</span>
+  <span class="k">task_mode</span>: <span class="s">&quot;train&quot;</span>
+  <span class="k">per_device_train_batch_size</span>: <span class="n">1</span>
+  <span class="k">per_update_total_batch_size</span>: <span class="n">4</span>
+  <span class="k">num_train_epochs</span>: <span class="n">1</span>
+  <span class="k">max_seq_len</span>: <span class="n">2048</span>
+  <span class="k">lr_scheduler</span>:
+    <span class="k">learning_rate</span>: <span class="n">0.000007</span>
+  <span class="k">lora</span>:
+    <span class="k">enable_lora</span>: false        # full fine-tune, no LoRA
+<span class="k">path_settings</span>:
+  <span class="k">model_name_or_path</span>: <span class="s">&quot;Llama-3.2-11B-Vision-Instruct&quot;</span>
+  <span class="k">nvme_path</span>: <span class="s">&quot;/mnt/nvme0&quot;</span>     # aiDAPTIV+ swaps training state to this SSD</code></pre></figure>
+    </div>
+  </div></section>
+
+  <section class="block" id="dataset"><div class="wrap">
+    <div class="head"><span class="hud">05.</span><h2>The dataset</h2><span class="chips" style="margin-left:auto"><span><b>700</b>train</span><span><b>100</b>validation</span><span><b>200</b>test</span></span></div>
+    <div class="dgrid"><figure data-lb><img src="assets/maistorage/dataset/M01.jpg" alt="Fingertip pulse oximeter" loading="lazy"><figcaption>Fingertip pulse oximeter</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/M02.jpg" alt="Digital thermometer" loading="lazy"><figcaption>Digital thermometer</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/M03.jpg" alt="Blood glucose meter" loading="lazy"><figcaption>Blood glucose meter</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/M04.jpg" alt="Stethoscope" loading="lazy"><figcaption>Stethoscope</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/M05.jpg" alt="Digital blood pressure monitor" loading="lazy"><figcaption>Digital blood pressure monitor</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/M06.jpg" alt="Portable nebulizer" loading="lazy"><figcaption>Portable nebulizer</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/M07.jpg" alt="Inhaler" loading="lazy"><figcaption>Inhaler</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/M08.jpg" alt="Peak flow meter" loading="lazy"><figcaption>Peak flow meter</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/M09.jpg" alt="Medical penlight" loading="lazy"><figcaption>Medical penlight</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/M10.jpg" alt="Kidney dish" loading="lazy"><figcaption>Kidney dish</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/MY01.jpg" alt="Touch &#x27;n Go card" loading="lazy"><figcaption>Touch &#x27;n Go card</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/MY02.jpg" alt="Malaysian ringgit banknote" loading="lazy"><figcaption>Malaysian ringgit banknote</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/MY03.jpg" alt="Malaysian ringgit coin" loading="lazy"><figcaption>Malaysian ringgit coin</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/MY04.jpg" alt="Proton car key" loading="lazy"><figcaption>Proton car key</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/MY05.jpg" alt="Perodua car key" loading="lazy"><figcaption>Perodua car key</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/MY06.jpg" alt="Pos Malaysia envelope" loading="lazy"><figcaption>Pos Malaysia envelope</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/MY07.jpg" alt="Malaysian batik pouch" loading="lazy"><figcaption>Malaysian batik pouch</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/MY08.jpg" alt="100PLUS isotonic drink" loading="lazy"><figcaption>100PLUS isotonic drink</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/MY09.jpg" alt="Spritzer mineral water bottle" loading="lazy"><figcaption>Spritzer mineral water bottle</figcaption></figure><figure data-lb><img src="assets/maistorage/dataset/MY10.jpg" alt="BOH tea" loading="lazy"><figcaption>BOH tea</figcaption></figure></div>
+  </div></section>
+
+  <section class="block alt" id="results"><div class="wrap">
+    <div class="head"><span class="hud">06.</span><h2>Results</h2></div>
+    <p class="lead" style="margin-bottom:10px">Llama 3.2 11B Vision on the 200 test images, before and after fine-tuning on aiDAPTIV+.</p>
+  </div>
+  <div class="nums"><div><b data-n="86.00" data-d="2" data-s="%">86.00%</b><span>accuracy before fine-tuning</span></div><div><b data-n="94.50" data-d="2" data-s="%">94.50%</b><span>accuracy after fine-tuning</span></div><div><b>28 → 11</b><span>wrong answers, 60.7% fewer</span></div><div><b>0.944</b><span>macro F1 after, from 0.879</span></div></div>
+  <div class="wrap"><p class="lead-line">The change is significant, McNemar exact p = 0.000015, with 17 answers fixed and none broken. For comparison, Qwen2.5-VL-7B already scored 95.00% before any training.</p>
+    <figure class="bigimg" style="background:#000"><img src="assets/maistorage/aitpc-evaluation.jpg" alt="Evaluation run on the AITPC workstation" loading="lazy" style="padding:0"><figcaption>Evaluation on the AITPC workstation, 9 September 2026. Each line compares the label with the model's answer.</figcaption></figure>
+  </div></section>
+</main>
+<footer class="foot"><div class="wrap">
+  <div class="cols">
+    <div><a class="brand" href="index.html"><i></i>Joshua Ng Yu Meng</a><p style="margin:18px 0 22px;max-width:360px">Electronic Engineering at UTAR. EEG brain-computer interfaces, robotics and vision, debate and public speaking.</p><div class="social"><a href="https://github.com/Joshua3178" target="_blank" rel="noreferrer" aria-label="GitHub"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /> <path d="M9 18c-4.51 2-5-2-7-2" /> </svg></a><a href="https://www.linkedin.com/in/joshua-ng-5a8638422" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /> <rect width="4" height="12" x="2" y="9" /> <circle cx="4" cy="4" r="2" /> </svg></a><a href="mailto:yumeng3178@gmail.com" aria-label="Email"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="20" height="16" x="2" y="4" rx="2" /> <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /> </svg></a><a href="https://youtu.be/0LwCP-skTLY?si=Z0L5x6rH1_snY8cT" target="_blank" rel="noreferrer" aria-label="TEDx talk on YouTube"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" /> <path d="m10 15 5-3-5-3z" /> </svg></a></div></div>
+    <div><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="academic.html">Academic</a></li><li><a href="innovation.html">Innovation</a></li><li><a href="events.html">Events</a></li><li><a href="certificates.html">Certificates</a></li></ul></div>
+    <div><h4>Projects</h4><ul><li><a href="fyp.html">EEG-BCI robot arm</a></li><li><a href="maistorage.html">MaiStorage collaboration</a></li><li><a href="innovation.html#demiurge">Demiurge</a></li><li><a href="https://youtu.be/0LwCP-skTLY?si=Z0L5x6rH1_snY8cT" target="_blank" rel="noreferrer">TEDx talk</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="mailto:yumeng3178@gmail.com">yumeng3178@gmail.com</a></li><li><a href="https://github.com/Joshua3178" target="_blank" rel="noreferrer">GitHub</a></li><li><a href="https://www.linkedin.com/in/joshua-ng-5a8638422" target="_blank" rel="noreferrer">LinkedIn</a></li></ul></div>
+  </div>
+  <div class="base"><span>© 2026 Joshua Ng Yu Meng</span><a href="#top" style="color:var(--orange);text-decoration:none;font-weight:700">Back to top ↑</a></div>
+</div></footer>
+<script src="site.js"></script></body></html>
